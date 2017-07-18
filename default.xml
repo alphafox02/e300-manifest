@@ -16,13 +16,21 @@
         <remote name="ettus"
                 fetch="http://github.com/EttusResearch" />
 
+        <remote name="geon-private"
+                fetch="ssh://git@curiosity/" />
+
+	<remote name="geon"
+                fetch="https://github.com/GeonTech/" />
+
 	<default remote="openembedded" revision="master"  />
 
-	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="475cfaa3e1f6991c07992694d122a8f35c9008b9" upstream="refs/heads/e300-daisy" />
-	<project name="bitbake"  path="bitbake" revision="fe083b674b20b254877a6d8249b11c9a7373866e" upstream="refs/heads/1.22"/>
-	<project name="oe-core"  path="oe-core" revision="348b90a8a9b32e5e4a10960194a2f622cb07a0c6" upstream="refs/head/daisy" />
-	<project name="meta-oe"  path="meta-oe" revision="ee24939c4c70b63a9fb7e93a58889a3231d3d367" upstream="refs/head/daisy" />
-	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="4ad75674549fc0f206f967b7b287769080c3eba9" upstream="refs/head/daisy" />
-	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="27974a799f40f5bb9ee55fe80c2e306ddf9da818" upstream="refs/head/daisy" />
+	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="70863e87bbec2c03c8fba4e3d7379670ac5f4afb"/>
+	<project name="bitbake"  path="bitbake" revision="1.26.0"/>
+	<project name="oe-core"  path="oe-core" revision="fd27f8620ae4d95dfe07b27eee4256b0a128348a"/>
+	<project name="meta-oe"  path="meta-oe" revision="fido"/>
+	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="13779b9254bab450875a60ed8f21edd0e8876a71"/>
+	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="75e79383ce69a4de0989a5c655e0f062e4b12335"/>
+        <project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="66198555064787fb6f27546927045d401ad9114b"/>
+        <project name="meta-redhawk-apps" remote="geon-private" path="meta-redhawk-apps" revision="2fe2a5c048c0798b3c122d8459c606adc50c7775"/>
 
 </manifest>
