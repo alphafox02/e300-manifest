@@ -17,7 +17,7 @@
                 fetch="http://github.com/EttusResearch" />
 
         <remote name="geon-private"
-                fetch="ssh://git@curiosity/" />
+                fetch="http://curiosity/" />
 
 	<remote name="geon"
                 fetch="https://github.com/GeonTech/" />
