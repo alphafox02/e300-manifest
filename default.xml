@@ -16,9 +16,6 @@
         <remote name="ettus"
                 fetch="http://github.com/EttusResearch" />
 
-        <remote name="geon-private"
-                fetch="http://curiosity/" />
-
 	<remote name="geon"
                 fetch="https://github.com/GeonTech/" />
 
@@ -31,6 +28,6 @@
 	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="13779b9254bab450875a60ed8f21edd0e8876a71"/>
 	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="75e79383ce69a4de0989a5c655e0f062e4b12335"/>
         <project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="66198555064787fb6f27546927045d401ad9114b"/>
-        <project name="openembedded/meta-redhawk-apps" remote="geon-private" path="meta-redhawk-apps" revision="master"/>
+        <project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="master"/>
 
 </manifest>
