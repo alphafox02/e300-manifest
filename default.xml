@@ -21,13 +21,13 @@
 
 	<default remote="openembedded" revision="master"  />
 
-	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="70863e87bbec2c03c8fba4e3d7379670ac5f4afb"/>
-	<project name="bitbake"  path="bitbake" revision="fdb6c123593fd2255b9b09e6bdf7306d64a82892"/>
-	<project name="openembedded-core"  path="oe-core" revision="fd27f8620ae4d95dfe07b27eee4256b0a128348a"/>
+	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="fido"/>
+	<project name="bitbake"  path="bitbake" revision="1.26"/>
+	<project name="openembedded-core"  path="oe-core" revision="fido"/>
 	<project name="meta-openembedded"  path="meta-oe" revision="fido"/>
-	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="13779b9254bab450875a60ed8f21edd0e8876a71"/>
-	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="e300-rfnoc"/>
+	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="fido"/>
+	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="fido"/>
 	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="66198555064787fb6f27546927045d401ad9114b"/>
-	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="develop"/>
+	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="fido"/>
 
 </manifest>
