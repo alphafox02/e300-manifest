@@ -19,6 +19,9 @@
 	<remote name="geon"
                 fetch="https://github.com/GeonTech/" />
 
+	<remote name="qt5"
+		fetch="https://github.com/meta-qt5/" />
+
 	<default remote="openembedded" revision="master"  />
 
 	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="rocko/n3xx"/>
@@ -27,6 +30,7 @@
 	<project name="meta-openembedded"  path="meta-oe" revision="rocko"/>
 	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="rocko"/>
 	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="rocko"/>
+	<project name="meta-qt5" remote="qt5" path="meta-qt5" revision="rocko"/>
 	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="rocko"/>
 	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="rocko"/>
 
