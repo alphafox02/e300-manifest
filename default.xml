@@ -22,8 +22,12 @@
 	<remote name="qt5"
 		fetch="https://github.com/meta-qt5/" />
 
+	<remote name="yocto"
+		fetch="git://git.yoctoproject.org/" />
+
 	<default remote="openembedded" revision="master"  />
 
+	<project name="meta-cloud_services" remote="yocto" path="meta-cloud-services" revision="rocko"/>
 	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="rocko/n3xx"/>
 	<project name="bitbake"  path="bitbake" revision="1.36"/>
 	<project name="openembedded-core"  path="oe-core" revision="rocko"/>
