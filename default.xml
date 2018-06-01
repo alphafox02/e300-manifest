@@ -21,13 +21,13 @@
 
 	<default remote="openembedded" revision="master"  />
 
-	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="jethro"/>
-	<project name="bitbake"  path="bitbake" revision="1.28"/>
-	<project name="openembedded-core"  path="oe-core" revision="jethro"/>
-	<project name="meta-openembedded"  path="meta-oe" revision="jethro"/>
-	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="jethro"/>
-	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="jethro"/>
-	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="66198555064787fb6f27546927045d401ad9114b"/>
-	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="jethro"/>
+	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="rocko/n3xx"/>
+	<project name="bitbake"  path="bitbake" revision="1.36"/>
+	<project name="openembedded-core"  path="oe-core" revision="rocko"/>
+	<project name="meta-openembedded"  path="meta-oe" revision="rocko"/>
+	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="rocko"/>
+	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="rocko"/>
+	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="rocko"/>
+	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="rocko"/>
 
 </manifest>
