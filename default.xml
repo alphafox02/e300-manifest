@@ -19,9 +19,12 @@
 	<remote name="geon"
                 fetch="https://github.com/GeonTech/" />
 
+	<remote name="klekiefer"
+                fetch="https://github.com/kekiefer/" />
+
 	<default remote="openembedded" revision="master"  />
 
-	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="jethro"/>
+	<project name="meta-ettus" remote="kekiefer" path="meta-ettus" revision="rocko+e3xx"/>
 	<project name="bitbake"  path="bitbake" revision="1.28"/>
 	<project name="openembedded-core"  path="oe-core" revision="jethro"/>
 	<project name="meta-openembedded"  path="meta-oe" revision="jethro"/>
