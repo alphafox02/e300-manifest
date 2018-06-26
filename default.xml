@@ -19,7 +19,7 @@
 	<remote name="geon"
                 fetch="https://github.com/GeonTech/" />
 
-	<remote name="klekiefer"
+	<remote name="kekiefer"
                 fetch="https://github.com/kekiefer/" />
 
 	<default remote="openembedded" revision="master"  />
