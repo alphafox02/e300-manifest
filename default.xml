@@ -28,6 +28,7 @@
 	<default remote="openembedded" revision="master"  />
 
 	<project name="meta-cloud-services" remote="yocto" path="poky/meta-cloud-services" revision="rocko"/>
+	<project name="poky" remote="yocto" path="poky/meta-poky"/>
 	<project name="meta-ettus" remote="ettus" path="poky/meta-ettus" revision="rocko/n3xx"/>
 	<project name="bitbake"  path="poky/bitbake" revision="1.36"/>
 	<project name="openembedded-core"  path="poky/oe-core" revision="rocko"/>
