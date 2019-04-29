@@ -12,7 +12,7 @@
 
         <remote name="yocto"
                 fetch="git://git.yoctoproject.org/" />
- 
+
         <remote name="ettus"
                 fetch="http://github.com/EttusResearch" />
 
@@ -27,15 +27,15 @@
 
 	<default remote="openembedded" revision="master"  />
 
-	<project name="meta-cloud-services" remote="yocto" path="meta-cloud-services" revision="rocko"/>
-	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="rocko/n3xx"/>
-	<project name="bitbake"  path="bitbake" revision="1.36"/>
-	<project name="openembedded-core"  path="oe-core" revision="rocko"/>
-	<project name="meta-openembedded"  path="meta-oe" revision="rocko"/>
-	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="rocko"/>
-	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="rocko"/>
-	<project name="meta-qt5" remote="qt5" path="meta-qt5" revision="rocko"/>
-	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="rocko"/>
-	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="rocko"/>
+	<project name="meta-cloud-services" remote="yocto" path="poky/meta-cloud-services" revision="rocko"/>
+	<project name="meta-ettus" remote="ettus" path="poky/meta-ettus" revision="rocko/n3xx"/>
+	<project name="bitbake"  path="poky/bitbake" revision="1.36"/>
+	<project name="openembedded-core"  path="poky/oe-core" revision="rocko"/>
+	<project name="meta-openembedded"  path="poky/meta-oe" revision="rocko"/>
+	<project name="meta-xilinx" remote="Xilinx" path="poky/meta-xilinx" revision="rocko"/>
+	<project name="meta-sdr" remote="balister" path="poky/meta-sdr" revision="rocko"/>
+	<project name="meta-qt5" remote="qt5" path="poky/meta-qt5" revision="rocko"/>
+	<project name="meta-redhawk-sdr" remote="geon" path="poky/meta-redhawk-sdr" revision="rocko"/>
+	<project name="meta-redhawk-apps" remote="geon" path="poky/meta-redhawk-apps" revision="rocko"/>
 
 </manifest>
