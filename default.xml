@@ -1,42 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <manifest>
-	<remote name="openembedded"
-		fetch="git://github.com/openembedded" />
-
-	<remote name="Xilinx"
-		fetch="git://github.com/Xilinx" />
-
-	<remote name="balister"
-		fetch="git://github.com/balister" />
-
-        <remote name="yocto"
-                fetch="git://git.yoctoproject.org/" />
-
-        <remote name="ettus"
-                fetch="http://github.com/EttusResearch" />
-
-	<remote name="geon"
-                fetch="https://github.com/GeonTech/" />
-
-	<remote name="qt5"
-		fetch="https://github.com/meta-qt5/" />
-
-	<remote name="yocto"
-		fetch="git://git.yoctoproject.org/" />
-
+	<remote name="openembedded" fetch="git://github.com/openembedded" />
+	<remote name="openembedded-core" fetch="git://github.com/openembedded-core" />
+	<remote name="Xilinx" fetch="git://github.com/Xilinx" />
+  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
+	<remote name="ettus" fetch="http://github.com/EttusResearch" />
+	<remote name="geon" fetch="https://github.com/GeonTech/" revision="master" />
+	<remote name="balister" fetch="git://github.com/balister" />
+	<remote name="qt5" fetch="https://github.com/meta-qt5/" />
 	<default remote="openembedded" revision="master"  />
 
-	<project name="meta-cloud-services" remote="yocto" path="poky/meta-cloud-services" revision="rocko"/>
-	<project name="poky" remote="yocto" path="poky/meta-poky"/>
-	<project name="meta-ettus" remote="ettus" path="poky/meta-ettus" revision="rocko/n3xx"/>
-	<project name="bitbake"  path="poky/bitbake" revision="1.36"/>
-	<project name="openembedded-core"  path="poky/oe-core" revision="rocko"/>
-	<project name="meta-openembedded"  path="poky/meta-oe" revision="rocko"/>
-	<project name="meta-xilinx" remote="Xilinx" path="poky/meta-xilinx" revision="rocko"/>
+	<project name="poky" remote="yocto" path="poky"/>
+	<project name="openembedded-core"  path="poky/openembedded-core" revision="rocko"/>
+	<project name="meta-openembedded"  path="poky/meta-openembedded" revision="rocko"/>
 	<project name="meta-sdr" remote="balister" path="poky/meta-sdr" revision="rocko"/>
 	<project name="meta-qt5" remote="qt5" path="poky/meta-qt5" revision="rocko"/>
-	<project name="meta-redhawk-sdr" remote="geon" path="poky/meta-redhawk-sdr" revision="rocko"/>
+	<project name="meta-ettus" remote="ettus" path="poky/meta-ettus" revision="rocko/n3xx"/>
+	<project name="meta-xilinx" remote="Xilinx" path="poky/meta-xilinx" revision="rocko"/>
+	<project name="meta-redhawk-sdr" remote="geon" path="poky/meta-redhawk-sdr" />
 	<project name="meta-redhawk-apps" remote="geon" path="poky/meta-redhawk-apps" revision="rocko"/>
-
 </manifest>
