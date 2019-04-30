@@ -11,8 +11,8 @@
 	<default remote="openembedded" revision="master"  />
 
 	<project name="bitbake" remote="openembedded" path="1.36"/>
-	<project name="openembedded-core"  path="openembedded-core" revision="rocko"/>
-	<project name="meta-openembedded"  path="meta-openembedded" revision="rocko"/>
+	<project name="openembedded-core" remote="openembedded" path="openembedded-core" revision="rocko"/>
+	<project name="meta-openembedded" remote="openembedded" path="meta-openembedded" revision="rocko"/>
 	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="rocko"/>
 	<project name="meta-qt5" remote="qt5" path="meta-qt5" revision="rocko"/>
 	<project name="meta-ettus" remote="ettus" path="meta-ettus" revision="rocko-updates"/>
