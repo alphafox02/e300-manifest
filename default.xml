@@ -10,7 +10,7 @@
 	<remote name="qt5" fetch="https://github.com/meta-qt5/" />
 	<default remote="openembedded" revision="master"  />
 
-	<project name="bitbake" remote="openembedded" path="1.36"/>
+	<project name="bitbake" remote="openembedded" path="bitbake" revision="1.36"/>
 	<project name="openembedded-core" remote="openembedded" path="openembedded-core" revision="rocko"/>
 	<project name="meta-openembedded" remote="openembedded" path="meta-openembedded" revision="rocko"/>
 	<project name="meta-sdr" remote="balister" path="meta-sdr" revision="rocko"/>
