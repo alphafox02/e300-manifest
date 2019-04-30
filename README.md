@@ -38,7 +38,7 @@ Getting Started
 
     Tell Repo where to find the manifest
 
-        $ repo init -u git://github.com/balister/oe-gnuradio-manifest.git -b stable
+        $ repo init -u git://github.com/Geontech/e300-manifest.git -b rocko_dev
 
     A successful initialization will end with a message stating that Repo is
     initialized in your working directory. Your client directory should now
@@ -47,19 +47,19 @@ Getting Started
     **Note**
     You can use the **-b** switch to specify the branch of the repository
     to use.  I develop on master so it might be iffy at times. Use the
-    "stable" branch fornormal work. 
+    "stable" branch fornormal work.
 
     The **-m** switch selects the manifest file (default is *default.xml*).
 
     To test out the bleeding edge, type:
 
         $ repo init -u git://github.com/balister/oe-gnuradio-manifest.git
-    
+
     To get back to the known stable version, type:
 
         $ repo init -u git://github.com/balister/oe-gnuradio-manifest -b stable
 
-    To learn more about repo, look at http://source.android.com/source/version-control.html 
+    To learn more about repo, look at http://source.android.com/source/version-control.html
     ***
 
 3.  Fetch all the repositories.
@@ -72,7 +72,7 @@ Getting Started
 4.  Initialize the OpenEmbedded Environment. This assumes you created the oe-core directory
     in your home directory.
 
-        $ TEMPLATECONF=`pwd`/meta-sdr/conf source ./oe-core/oe-init-build-env ./build ./bitbake
+        $ TEMPLATECONF=`pwd`/meta-redhawk-apps/conf/ source ./openembedded-core/oe-init-build-env ./build ./bitbake
 
     This copies default configuration information into the build/conf*
     directory and sets up some environment variables for OpenEmbedded.  You may
@@ -84,8 +84,8 @@ Getting Started
     do an awful lot of compilation so make sure you have plenty of space (25GB
     minimum). Go drink some beer.
 
-        $ export MACHINE="zedboard-zynq7" (default is ettus-e1xx)
-        $ bitbake gnuradio-dev-image
+        $ export MACHINE=ettus-e3xx-sg1
+        $ bitbake redhawk-base-image
 
     If everything goes well, you should have a compressed root filesystem
     tarball as well as kernel and bootloader binaries available in your
@@ -100,8 +100,8 @@ Getting Started
 
     Run:
 
-        $ export MACHINE="zedboard-zynq7" (only if MACHINE is not already set)
-        $ bitbake -c populate_sdk gnuradio-dev-image
+        $ export MACHINE=ettus-e3xx-sg1 (only if MACHINE is not already set)
+        $ bitbake -c populate_sdk redhawk-base-image
 
     When this completes the sdk is in ./tmp-eglibc/deploy/sdk/ as an .sh file
     you copy to the machine you want to cross compile on and run the file.
@@ -116,7 +116,7 @@ To pick up the latest changes for all source repositories, run:
 
 Enter the OpenEmbedded environment:
 
-    $ . oe-core/oe-init-build-env ./build ./bitbake
+    $ . openembedded-core/oe-init-build-env ./build ./bitbake
 
     If you forget to setup these environment variables prior to running bitbake,
     your OS will complain that it can't find bitbake on the path.  Don't try
@@ -124,7 +124,7 @@ Enter the OpenEmbedded environment:
 
 You can then rebuild as before:
 
-    $ bitbake gnuradio-dev-image
+    $ bitbake redhawk-base-image
 
 Starting from Fresh
 -------------------
@@ -147,7 +147,7 @@ repositories and branches or pull in additional meta-layers.
 
 Clone this repository (or fork it on github):
 
-    $ git clone git://github.com/balister/oe-gnuradio-manifest.git
+    $ git clone https://github.com/Geontech/e300-manifest.git -b rocko_dev
 
 Make your changes (and contribute them back if they are generally useful :) ),
 and then re-initialize your repo client
@@ -164,4 +164,3 @@ These machines have been tested:
  imx6sabre-lite
 
 Please send success stories to philip@balister.org.
-
