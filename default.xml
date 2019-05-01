@@ -17,6 +17,6 @@
 	<project name="meta-qt5" remote="qt5" path="meta-qt5" revision="rocko"/>
 	<project name="meta-ettus-1" remote="balister" path="meta-ettus" revision="rocko-updates"/>
 	<project name="meta-xilinx" remote="Xilinx" path="meta-xilinx" revision="rocko"/>
-	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="rocko"/>
+	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="master"/>
 	<project name="meta-redhawk-apps" remote="geon" path="meta-redhawk-apps" revision="rocko"/>
 </manifest>
