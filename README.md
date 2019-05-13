@@ -33,8 +33,8 @@ Getting Started
 
     Create an empty directory to hold your working files.
 
-        $ mkdir oe-repo
-        $ cd oe-repo
+        $ mkdir e300-build
+        $ cd e300-build
 
     Tell Repo where to find the manifest
 
@@ -44,24 +44,6 @@ Getting Started
     initialized in your working directory. Your client directory should now
     contain a .repo directory where files such as the manifest will be kept.
     ***
-    **Note**
-    You can use the **-b** switch to specify the branch of the repository
-    to use.  I develop on master so it might be iffy at times. Use the
-    "stable" branch fornormal work.
-
-    The **-m** switch selects the manifest file (default is *default.xml*).
-
-    To test out the bleeding edge, type:
-
-        $ repo init -u git://github.com/balister/oe-gnuradio-manifest.git
-
-    To get back to the known stable version, type:
-
-        $ repo init -u git://github.com/balister/oe-gnuradio-manifest -b stable
-
-    To learn more about repo, look at http://source.android.com/source/version-control.html
-    ***
-
 3.  Fetch all the repositories.
 
         $ repo sync
@@ -69,23 +51,34 @@ Getting Started
     Now go put on the coffee machine as this may take 20 minutes depending on
     your connection.
 
-4.  Initialize the OpenEmbedded Environment. This assumes you created the oe-core directory
-    in your home directory.
+4.  Go into the sdr-build directory:
 
-        $ TEMPLATECONF=`pwd`/meta-redhawk-apps/conf/ source ./openembedded-core/oe-init-build-env ./build ./bitbake
+        $ cd sdr-build
 
-    This copies default configuration information into the build/conf*
-    directory and sets up some environment variables for OpenEmbedded.  You may
-    wish to edit the configuration options at this point.
+5.  Update the submodules:
 
-5.  Build an image.
+        $ git submodule update --init
+
+6.  Move the meta-redhawk-sdr directory into the sdr-build directory   
+
+7.  Initialize the build system
+
+        $ TEMPLATECONF=`pwd`/meta-sdr/conf/conf-e3xx/ source ./openembedded-core/oe-init-build-env ./build ./bitbake
+
+8.  Go into the build directory and edit the bblayers.conf file by adding the line:
+
+    ```PATH_TO_sdr-build/meta-redhawk-sdr \```
+
+    where "PATH_TO_sdr-build" is the absolute path to the directory "sdr-build"
+
+9.  Build an image.
 
     This process downloads several gigabytes of source code and then proceeds to
     do an awful lot of compilation so make sure you have plenty of space (25GB
     minimum). Go drink some beer.
 
-        $ export MACHINE=ettus-e3xx-sg1
-        $ bitbake redhawk-base-image
+        $ export MACHINE=ettus-e3xx-sg3
+        $ bitbake redhawk-usrp-uhd-image
 
     If everything goes well, you should have a compressed root filesystem
     tarball as well as kernel and bootloader binaries available in your
@@ -96,17 +89,10 @@ Getting Started
     a look to be sure your operating system is supported:
     https://wiki.yoctoproject.org/wiki/Distribution_Support
 
-6.  Build an SDK for cross compiling gnuradio on an x86 machine.
+10. After building the image and getting it up and running, ssh into the E310
+and run the script:
 
-    Run:
-
-        $ export MACHINE=ettus-e3xx-sg1 (only if MACHINE is not already set)
-        $ bitbake -c populate_sdk redhawk-base-image
-
-    When this completes the sdk is in ./tmp-eglibc/deploy/sdk/ as an .sh file
-    you copy to the machine you want to cross compile on and run the file.
-    It will default to installing the sdk in /usr/local, and you can ask it to
-    install anywhere you have write access to.
+    $ /usr/lib/uhd/utils/uhd_images_downloader.py
 
 Staying Up to Date
 ------------------
@@ -124,7 +110,7 @@ Enter the OpenEmbedded environment:
 
 You can then rebuild as before:
 
-    $ bitbake redhawk-base-image
+    $ bitbake redhawk-usrp-uhd-image
 
 Starting from Fresh
 -------------------
@@ -153,14 +139,5 @@ Make your changes (and contribute them back if they are generally useful :) ),
 and then re-initialize your repo client
 
     $ repo init -u <file:///path/to/your/git/repository.git>
-
-Known Good Machines
--------------------
-
-These machines have been tested:
-
- zedboard-zynq7
- ettus-e1xx (need to use kernel+modules from official image)
- imx6sabre-lite
 
 Please send success stories to philip@balister.org.

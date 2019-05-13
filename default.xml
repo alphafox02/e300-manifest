@@ -3,7 +3,7 @@
 <manifest>
 	<remote name="openembedded" fetch="git://github.com/openembedded" />
 	<remote name="Xilinx" fetch="git://github.com/Xilinx" />
-    <remote name="yocto" fetch="git://git.yoctoproject.org/" />
+	<remote name="yocto" fetch="git://git.yoctoproject.org/" />
 	<remote name="ettus" fetch="http://github.com/EttusResearch" />
 	<remote name="geon" fetch="https://github.com/GeonTech/" revision="master" />
 	<remote name="balister" fetch="git://github.com/balister" />
