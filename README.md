@@ -92,7 +92,7 @@ Getting Started
 10. After building the image and getting it up and running, ssh into the E310
 and run the script:
 
-    $ /usr/lib/uhd/utils/uhd_images_downloader.py
+        $ /usr/lib/uhd/utils/uhd_images_downloader.py
 
 Staying Up to Date
 ------------------
