@@ -94,6 +94,30 @@ and run the script:
 
         $ /usr/lib/uhd/utils/uhd_images_downloader.py
 
+Stand-alone Build
+-----------------
+
+Do you want your E310 to be a stand-alone REDHAWK Domain complete with components, a GPP, etc.?  The `redhawk-usrp-uhd-image` does not include many of those elements, but each can be easily added by either defining a new image or extending the target image from your `build/conf/local.conf` file:
+
+```
+CORE_IMAGE_EXTRA_INSTALL_append = "\
+    omniorb-init \
+    omnievents-init \
+    domain-init \
+    node-deployer \
+    gpp \
+    packagegroup-redhawk-basic-components \
+    packagegroup-redhawk-basic-softpkgs \
+"
+COMPATIBLE_MACHINE_pn-sse2neon = "ettus-e300"
+```
+
+The first change to `CORE_IMAGE_EXTRA_INSTALL` ensures that the init.d services for OmniNames, OmniEvents, and the Domain are all installed.  The inclusion of the gpp and node-deployer packages will result in a `-ALL` device manager definition being installed that contains both the GPP and the USRP UHD Device.  The last two lines are the package groups for components and softpkgs defined in the layer.
+
+The second change to `COMPATIBLE_MACHINE` addresses the lack of `arm` in the E3xx build environment's `MACHINEOVERRIDES` variable, which prevents the associated `sse2neon` package from being built, which would then prevent the `rh.DataConverter` from being built, and so on.
+
+Between these two changes, the next time you run `bitbake redhawk-usrp-uhd-image`, your root file system will be ready to act as a stand-alone REDHAWK Domain.
+
 Staying Up to Date
 ------------------
 To pick up the latest changes for all source repositories, run:
