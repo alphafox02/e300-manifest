@@ -118,6 +118,7 @@ The second change to `COMPATIBLE_MACHINE` addresses the lack of `arm` in the E3x
 
 Between these two changes, the next time you run `bitbake redhawk-usrp-uhd-image`, your root file system will be ready to act as a stand-alone REDHAWK Domain.
 
+
 Staying Up to Date
 ------------------
 To pick up the latest changes for all source repositories, run:
