@@ -105,7 +105,7 @@ CORE_IMAGE_EXTRA_INSTALL_append = "\
     omnievents-init \
     domain-init \
     node-deployer \
-    gpp \
+    gpp gpp-node \
     packagegroup-redhawk-basic-components \
     packagegroup-redhawk-basic-softpkgs \
 "
