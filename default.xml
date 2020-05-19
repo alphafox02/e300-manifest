@@ -11,5 +11,5 @@
 	<default remote="openembedded" revision="master"  />
 
 	<project name="sdr-build" remote="balister" path="" revision="rocko-e300"/>
-	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="master"/>
+	<project name="meta-redhawk-sdr" remote="geon" path="meta-redhawk-sdr" revision="rocko"/>
 </manifest>
