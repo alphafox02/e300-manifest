@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <manifest>
-	<remote name="openembedded" fetch="git://github.com/openembedded" />
-	<remote name="Xilinx" fetch="git://github.com/Xilinx" />
-	<remote name="yocto" fetch="git://git.yoctoproject.org/" />
-	<remote name="ettus" fetch="http://github.com/EttusResearch" />
+	<remote name="openembedded" fetch="https://github.com/openembedded" />
+	<remote name="Xilinx" fetch="https://github.com/Xilinx" />
+	<remote name="yocto" fetch="https://git.yoctoproject.org/" />
+	<remote name="ettus" fetch="https://github.com/EttusResearch" />
 	<remote name="geon" fetch="https://github.com/GeonTech/" revision="master" />
-	<remote name="balister" fetch="git://github.com/balister" />
+	<remote name="balister" fetch="https://github.com/balister" />
 	<remote name="qt5" fetch="https://github.com/meta-qt5/" />
 	<default remote="openembedded" revision="master"  />
 
